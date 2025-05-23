@@ -1,0 +1,37 @@
+type: custom:swipe-card
+card_width: calc(100% - 48px)
+parameters:
+  centeredSlides: true
+  slidesPerView: auto
+  spaceBetween: 16
+  initialSlide: 0
+cards:
+  - type: sensor
+    entity: sensor.appdaemon_cpu_percent
+    hours_to_show: 40
+    detail: 1
+    graph: line
+    name: My room power
+    icon: none
+    card_mod:
+      class: graph
+  - type: sensor
+    entity: sensor.appdaemon_memory_percent
+    hours_to_show: 24
+    detail: 1
+    graph: line
+    name: null
+    icon: none
+    card_mod:
+      class: graph
+      background: var(--blue-tint)
+  - type: sensor
+    entity: sensor.home_assistant_host_disk_total
+    hours_to_show: 24
+    detail: 1
+    graph: line
+    name: null
+    icon: none
+    card_mod:
+      class: graph
+      background: var(--blue-tint)
